@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления персоналом Военкомата</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+    
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.jpg" alt="Логотип" class="logo">
+                <h2>Военкомат</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="active"><i class="fas fa-home"></i> Главная</a>
+                <a href="#"><i class="fas fa-users"></i> Сотрудники</a>
+                <a href="#"><i class="fas fa-clipboard-list"></i> Призывники</a>
+                <a href="#"><i class="fas fa-calendar-alt"></i> Графики</a>
+                <a href="#"><i class="fas fa-file-alt"></i> Отчеты</a>
+                <a href="#"><i class="fas fa-cog"></i> Настройки</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="img/free-icon-user-709722.png" alt="Пользователь">
+                    <div>
+                        <span class="user-name">Рыжов К.А.</span>
+                        <span class="user-role">Администратор</span>
+                    </div>
+                </div>
+                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Выход</button>
+            </div>
+        </aside>
+
+   
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Управление персоналом</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content">
+     
+                <section class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>245</h3>
+                            <p>Сотрудников</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-green">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>32</h3>
+                            <p>Новых за месяц</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-orange">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>18</h3>
+                            <p>На больничном</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-red">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>7</h3>
+                            <p>В командировке</p>
+                        </div>
+                    </div>
+                </section>
+
+     
+                <section class="employees-section">
+                    <div class="section-header">
+                        <h2>Список сотрудников</h2>
+                        <button class="add-employee-btn">
+                            <i class="fas fa-plus"></i> Добавить
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="employees-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>ФИО</th>
+                                    <th>Должность</th>
+                                    <th>Отдел</th>
+                                    <th>Город</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Рыжов Кирилл Алексеевич</td>
+                                    <td>Военный комиссар</td>
+                                    <td>Управление</td>
+                                    <td>Щёлково</td>
+                                    <td><span class="status active">Активен</span></td>
+                                    <td>
+                                        <button class="action-btn edit">Изменить</button>
+                                        <button class="action-btn delete">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Сологаев Алексей Алексеевич</td>
+                                    <td>Заместитель</td>
+                                    <td>Управление</td>
+                                    <td>Фрязино</td>
+                                    <td><span class="status active">Активен</span></td>
+                                    <td>
+                                        <button class="action-btn edit">Изменить</button>
+                                        <button class="action-btn delete">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Сидорова Мария Ивановна</td>
+                                    <td>Специалист</td>
+                                    <td>Кадры</td>
+                                    <td>Лосино-Петровский</td>
+                                    <td><span class="status on-leave">Отпуск</span></td>
+                                    <td>
+                                         <button class="action-btn edit">Изменить</button>
+                                         <button class="action-btn delete">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Кузнецов Алексей Викторович</td>
+                                    <td>Врач</td>
+                                    <td>Медицинская комиссия</td>
+                                    <td>Щёлково</td>
+                                    <td><span class="status business-trip">Командировка</span></td>
+                                    <td>
+                                        <button class="action-btn edit">Изменить</button>
+                                        <button class="action-btn delete">Удалить</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <div class="add-employee-form" style="display: none;">
+                    <h3>Добавить нового сотрудника</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Фамилия</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Имя</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Отчество</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Должность</label>
+                                <select required>
+                                    <option value="">Выберите должность</option>
+                                    <option>Военный комиссар</option>
+                                    <option>Заместитель</option>
+                                    <option>Специалист</option>
+                                    <option>Врач</option>
+                                    <option>Технический работник</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Отдел</label>
+                                <select required>
+                                    <option value="">Выберите отдел</option>
+                                    <option>Управление</option>
+                                    <option>Кадры</option>
+                                    <option>Медицинская комиссия</option>
+                                    <option>Призывной отдел</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Город</label>
+                                <select required>
+                                    <option value="">Выберите город</option>
+                                    <option>Щёлково</option>
+                                    <option>Фрязино</option>
+                                    <option>Лосино-Петровский</option>
+                                    <option>Щёлковский район</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="save-btn">Сохранить</button>
+                            <button type="button" class="cancel-btn">Отмена</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
